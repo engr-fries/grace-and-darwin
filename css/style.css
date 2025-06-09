@@ -50,3 +50,25 @@ section {
 .btn-primary:hover {
   background-color: #588157;
 }
+
+#countdown-section {
+  text-align: center;
+  background-color: #E9EDC9;
+  padding: 3rem 1rem;
+}
+
+.countdown-timer {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  font-size: 1.5rem;
+  margin-top: 1rem;
+  color: #3A3A3A;
+}
+
+.countdown-timer span {
+  background: #fff;
+  padding: 1rem;
+  border-radius: 10px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}

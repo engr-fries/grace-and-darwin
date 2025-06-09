@@ -2,27 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta http-equiv="refresh" content="5;url=wedding.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>You’re Invited</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <style>
     body {
-      margin: 0;
-      height: 100vh;
       background: url('img/watermark-bg.jpg') center/cover no-repeat;
+      font-family: 'Playfair Display', serif;
       display: flex;
       align-items: center;
       justify-content: center;
-      font-family: 'Playfair Display', serif;
-      color: #ffffff;
-      text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+      height: 100vh;
+      margin: 0;
+      color: white;
+    }
+    .fade-out {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: white;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      pointer-events: none;
+    }
+    .fade-out.active {
+      opacity: 1;
+    }
+    .btn {
+      padding: 1rem 2rem;
+      background: #A3B18A;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
     }
     h1 {
-      font-size: 3rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
     }
   </style>
 </head>
 <body>
-  <h1>You’re Invited...</h1>
+  <div class="content">
+    <div style="text-align:center;">
+      <h1>You’re Invited</h1>
+      <button class="btn" onclick="proceed()">Open Invitation</button>
+    </div>
+    <div class="fade-out" id="fade"></div>
+  </div>
+
+  <script>
+    function proceed() {
+      document.getElementById('fade').classList.add('active');
+      setTimeout(() => {
+        window.location.href = 'index.html';
+      }, 1000);
+    }
+  </script>
 </body>
 </html>

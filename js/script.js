@@ -1,3 +1,6 @@
+// Placeholder for interactivity
+console.log("Wedding site loaded.");
+
 $(function () {
   const weddingDate = new Date("2025-08-02T15:00:00").getTime();
 
@@ -22,4 +25,14 @@ $(function () {
       <div><strong>${secs}</strong><br>Seconds</div>
     `);
   }, 1000);
+});
+
+document.querySelectorAll('.toggle-btn').forEach(button => {
+  button.addEventListener('click', () => {
+    const moreText = button.previousElementSibling.querySelector('.more-text');
+    const isHidden = moreText.classList.contains('hidden');
+
+    moreText.classList.toggle('hidden');
+    button.textContent = isHidden ? 'Show less' : 'Read more';
+  });
 });

@@ -1,6 +1,8 @@
 // Placeholder for interactivity
 console.log("Wedding site loaded.");
 
+// C O U N T D O W N
+
 $(function () {
   const weddingDate = new Date("2025-08-02T15:00:00").getTime();
 
@@ -27,6 +29,18 @@ $(function () {
   }, 1000);
 });
 
+
+// NAVBAR BURGER MENU
+document.addEventListener('DOMContentLoaded', function () {
+  const toggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', function () {
+    nav.classList.toggle('active');
+  });
+});
+
+// S E E   M O R E
 document.querySelectorAll('.toggle-btn').forEach(button => {
   button.addEventListener('click', () => {
     const moreText = button.previousElementSibling.querySelector('.more-text');

@@ -2,225 +2,62 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.6" />
-  <title>Darwin & Grace's Wedding</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>You’re Invited</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+  <style>
+    body {
+      background: url('img/watermark-bg.jpg') center/cover no-repeat;
+      font-family: 'Playfair Display', serif;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      margin: 0;
+      color: white;
+    }
+    .fade-out {
+      position: absolute;
+      top: 0; left: 0;
+      width: 100%; height: 100%;
+      background: white;
+      opacity: 0;
+      transition: opacity 1s ease-in-out;
+      pointer-events: none;
+    }
+    .fade-out.active {
+      opacity: 1;
+    }
+    .btn {
+      padding: 1rem 2rem;
+      background: #A3B18A;
+      border: none;
+      border-radius: 5px;
+      color: white;
+      font-size: 1.2rem;
+      cursor: pointer;
+    }
+    h1 {
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
+    }
+  </style>
 </head>
-
-<nav class="navbar">
-  <div class="container">
-    <a href="#" class="logo">Grace & Darwin</a>
-    <ul class="nav-links">
-      <li><a href="#countdown">Countdown</a></li>
-      <li><a href="#story">Our Story</a></li>
-      <li><a href="#program">Program</a></li>
-      <li><a href="#rsvp">RSVP</a></li>
-      <li><a href="#gift">Gifts</a></li>
-    </ul>
-  </div>
-</nav>
-
 <body>
-
-  <header class="hero-full">
-  <div class="hero-container">
-  <div class="hero-grid">
-    <div class="hero-text">
-
-      <section class="parallax-section">
-      <div class="parallax-overlay"></div>
-      <h1 class="fade-in glow">Grace & Darwin</h1>
-      <p>We’re getting married on August 2, 2025</p>
+  <div class="content">
+    <div style="text-align:center;">
+      <h1>You’re Invited</h1>
+      <button class="btn" onclick="proceed()">Open Invitation</button>
     </div>
-    <div class="hero-photo">
-      <img src="img/bride-groom.png" alt="Bride and Groom">
-    </div>
-    </section>
-
-    </div>
-  </div>
-  </div>
-  </header>
-
-  <section id="welcome">
-  <h1 class="fade-in welcome-content">Welcome to Our Wedding</h1>
-  <p>We’re so excited to celebrate this milestone with you. Your love, prayers, and presence mean the world to us!</p>
-  <div class="wedding-details">
-      <div class="detail-box">
-        <h3>Date & Time</h3>
-        <p>August 2, 2025 · 3:00 PM</p>
-      </div>
-
-      <div class="detail-box">
-        <h3>Venue</h3>
-        <p>Fortune’s Hall, Bibincahan, Sorsogon City</p>
-      </div>
-
-      <div class="detail-box">
-        <h3>Attire</h3>
-        <p>Primary Sponsors: Barong & Sage Formal Dress<br>
-        Guests: Semi-formal or Formal</p>
-      </div>
-
-      <div class="detail-box">
-        <h3>Entourage</h3>
-        <p>Names coming soon 💐</p>
-      </div>
-    </div>
-
-    <blockquote>
-      “We love because He first loved us.” — 1 John 4:19
-    </blockquote>
+    <div class="fade-out" id="fade"></div>
   </div>
 
-  </section>
-
-  <section class="text-center p-5 bg-light">
-
-    <div class="d-flex justify-content-center gap-4"></div>
-    <section id="countdown-section">
-      <h2>Countdown to the Big Day</h2>
-        <div id="countdown" class="countdown-timer">
-          <div><strong>0</strong><br>Days</div>
-          <div><strong>0</strong><br>Hours</div>
-          <div><strong>0</strong><br>Minutes</div>
-          <div><strong>0</strong><br>Seconds</div>
-        </div>
-    </section>
-
-
-  </section>
-
-  <section id="#story" class="container py-5">
-    <h2 class="text-center">Our Story <br> A Love Written by God</h2>
-  
-  <section id="bride_story">
-  <div class="container">
-    <div class="row align-items-center mb-5">
-      <!-- Bride Image -->
-      <div class="col-md-6">
-        <img src="img/bride.jpg" class="img-fluid rounded" alt="Bride">
-      </div>
-      <!-- Bride Text -->
-      <div class="col-md-6">
-        <h2 class="mb-3">The Bride</h2>
-
-        <div class="collapsible-text">
-        <p>
-          I met Darwin during a season when I was cautiously opening my heart again to the possibility of someone special. At that time, I was entertaining feelings for someone else, but God graciously revealed to me that he wasn't the one. I was in an intentional season of journeying with God about my heart's desire for relationship. I had carefully crafted a list of non-negotiables and negotiables for my ideal lifetime partner.
-During this time, Darwin consistently reached out to me. We shared moments with our friends at church until I finally gave him a chance for exclusive time together over coffee and tea. I was amazed by how comfortably we fell into meaningful conversation that lasted about five hours.
-        <span class="more-text hidden"> It was then that he began hinting at how much he liked me, and later shared that he looked up to me as his ideal wife.
-However, he had to leave for Cavite for work. I honestly felt sad since we were already growing closer, and I could sense God leading me to care for him. To my surprise, he returned to Sorsogon to pursue a career as an educator at the university where I serve, and he laid down his intention to formally court me. We were both blessed when he was finally hired after trying six times over the past years. God indeed orchestrated everything so that we grew fond of each other and fell in love.
-I was amazed to discover that Darwin possessed much of the standards I had set for my lifetime partner—even things I had quietly desired but hadn't written on my list. God removed my hesitations about Darwin, especially concerning his recent journey with God, through His word in Ephesians 3. Through Paul's life, He made me realize that it's not about the length of time one has journeyed with God, but about the genuine encounter one has with Jesus.
-Soon enough, I was led to enter into a loving relationship with him. I am grateful that after waiting sixteen years, I finally found the one God allowed in my life—someone with whom I will spend the rest of my life.
-        </span>
-        </p>
-        <button class="toggle-btn">Read more</button>
-        </div>
-
-      </div>
-    </div>
-    </section>
-
-    <section id="groom_story">
-    <div class="row align-items-center">
-      <!-- Groom Text -->
-      <div class="col-md-6 order-md-2">
-        <img src="img/groom.jpg" class="img-fluid rounded" alt="Groom">
-      </div>
-      <!-- Groom Image -->
-      <div class="col-md-6 order-md-1">
-        <h2 class="mb-3">The Groom</h2>
-        
-        <div class="collapsible-text">
-        <p>
-          Our story began when I saw Grace again at church. I'd known her since high school — she was a year ahead of me, calm and unforgettable in the library. I had a small crush on her then, never imagining our paths would cross again.
-I was 33 when we reconnected through our faith community. Our first real conversation happened over lunch with churchmates, and I was completely drawn in by her genuine way of speaking. Later, we played badminton, and I found courage to talk to her more deeply. It was only a few minutes, but time felt like it stood still.
-I started pursuing her, but she seemed hesitant. When I heard someone else was pursuing her, I stepped back and respected her space, 
-          <span class="more-text hidden">believing that if something was meant for me, it would come in the right time. Even then, my feelings quietly grew.
-When I was set to leave for Cavite for work, Grace sent me a message: "Kung kailan nagiging close na tayo, saka ka naman aalis." That one sentence stopped me in my tracks. It only took me four hours in Cavite to realize I couldn't ignore what I was feeling. I packed up and returned to Sorsogon, trusting that God was guiding every step.
-When I got back, Grace was looking for me. Over lunch, I formally confessed that I liked her. She smiled and said, "Let's see where this takes us." It was real and full of possibility. Soon after, I spoke to her parents, asking to formally court her with sincerity and respect.
-We shared a month of meaningful courtship filled with conversations and prayers that brought us closer. On September 8, 2024, she said yes to being my girlfriend. I gave her a promise ring — a symbol of my commitment to build something lasting.
-On December 28, 2024, I proposed at Rizal Beach Resort with her family present. When I asked, "Will you marry me?" she said yes. It was the start of forever, and I thank God every day for writing a love story far greater than I ever imagined.
-        </span>
-        </p>
-        <button class="toggle-btn">Read more</button>
-        </div>
-
-      </div>
-    </div>
-    </section>
-
-  </div>
-</section>
-
-
-  <section class="container py-5">
-    <h2 class="text-center">Gallery</h2>
-    <div class="row">
-      <div class="col-md-4 mb-3">
-        <a href="img/1.jpg" data-lightbox="wedding"><img src="img/1.jpg" class="img-fluid rounded" /></a>
-      </div>
-    </div>
-  </section>
-
-  <section class="container py-5">
-    <h2 class="text-center">RSVP</h2>
-    <p>Please confirm your attendance by <strong>July 15, 2025</strong>.</p>
-    <a class="btn-primary" href="https://tinyurl.com/3epr5hdj" target="_blank">Click here to RSVP</a>
-  </section>
-
-  <section class="container py-5 bg-light">
-    <h2 class="text-center mb-4">Our Entourage</h2>
-    <div class="row text-center">
-      <div class="col-md-4">
-        <h5>Best Man</h5>
-        <p>James Velasquez</p>
-        <p>James Velasquez</p>
-        <p>James Velasquez</p>
-        <p>James Velasquez</p>
-        <p>James Velasquez</p>
-      </div>
-      <div class="col-md-4">
-        <h5>Maid of Honor</h5>
-        <p>Angelica Dela Cruz</p>
-        <p>Angelica Dela Cruz</p>
-        <p>Angelica Dela Cruz</p>
-        <p>Angelica Dela Cruz</p>
-        <p>Angelica Dela Cruz</p>
-        <p>Angelica Dela Cruz</p>
-      </div>
-      <div class="col-md-4">
-        <h5>Officiant</h5>
-        <p>Pastor Joel Madlangbayan</p>
-        <p>Pastor Joel Madlangbayan</p>
-        <p>Pastor Joel Madlangbayan</p>
-        <p>Pastor Joel Madlangbayan</p>
-        <p>Pastor Joel Madlangbayan</p>
-      </div>
-    </div>
-  </section>
-
-  <section class="container py-5">
-    <h2 class="text-center">Venue</h2>
-    <p class="text-center">📍 Fortune’s Hall, Bibincahan, Sorsogon City<br>📆 08-02-2025 <br>⏰ 3:00 PM</p>
-    <div class="ratio ratio-16x9">
-      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15470.012502393336!2d124.01950713278507!3d12.993516334455734!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x33a0ef3b52da833d%3A0xea4a0c6363248de2!2sFortune%E2%80%99s%20Hall%20Event%20Center!5e0!3m2!1sen!2sph!4v1749490816010!5m2!1sen!2sph" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-    </div>
-  </section>
-
-  <section class="container py-5 bg-light">
-    <h2 class="text-center mb-4">Our Love Songs</h2>
-    <div class="ratio ratio-16x9">
-      <iframe style="border-radius:12px" src="https://open.spotify.com/embed/playlist/7I963rXZslhsMafyWbk9sT?utm_source=generator" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
-    </div>
-  </section>
-
-  <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <script src="js/countdown.min.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
-  <script src="js/script.js"></script>
+  <script>
+    function proceed() {
+      document.getElementById('fade').classList.add('active');
+      setTimeout(() => {
+        window.location.href = 'wedding.html';
+      }, 1000);
+    }
+  </script>
 </body>
 </html>

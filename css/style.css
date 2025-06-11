@@ -218,6 +218,8 @@ section {
 }
 
 .navbar .container {
+  max-width: 1200px;
+  margin: auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -233,20 +235,20 @@ section {
 .nav-links {
   list-style: none;
   display: flex;
-  gap: 1.5rem;
+  gap: 1rem;
   /*margin: 0;*/
 }
 
 .nav-links li a {
   color: white;
   text-decoration: none;
-  font-weight: 600;
+  font-weight: bold;
 }
 
-/*
+
 .nav-links li a:hover {
   text-decoration: underline;
-}*/
+}
 
 
 /* ======================================
@@ -450,7 +452,7 @@ section {
 
 
 /* ======================================
-  Responsive Mobile Style
+  Mobile Responsive Style
 ====================================== */
 @media (max-width: 768px) {
   .hero-text, .hero-photo{
@@ -475,15 +477,17 @@ section {
   }
 
   .nav-links {
-    display: none;
-    flex-direction: column;
-    background-color: #A3B18A;
-    width: 100%;
     position: absolute;
     top: 60px;
     left: 0;
+    right: 0; /*added*/
+    flex-direction: column;
+    background-color: #A3B18A;
+    display: none;
     padding: 1rem 0;
+    text-align:center;
     z-index: 999;
+    width: 100%;
   }
 
   .nav-links.active {

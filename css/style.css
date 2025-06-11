@@ -321,12 +321,13 @@ section {
   font-family: 'Playfair Display', serif;
   font-size: 6rem;
   margin-bottom: 1rem;
-  color: #588157;
+  color: #e4ece4;
 }
 
 .hero-text p {
+  font-family: 'Playfair Display', serif;
   font-size: 1.2rem;
-  color: #4b7754;
+  color: #e9efea;
 }
 
 .hero-photo {

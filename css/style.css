@@ -148,33 +148,51 @@ section {
   background-color: #588157;
 }
 
+/* ======================================
+    CO U N T D O W N
+  =======================================  */
+
 #countdown-section {
-  text-align: center;
   background-color: #E9EDC9;
-  padding: 3rem 4rem;
+  padding: 4rem .5rem;
+  text-align: center;
   border-radius: 25px;
+ /* overflow-x: hidden; /* fixes horizontal overflow */
 }
 
 .countdown-timer {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-wrap: wrap;
-  gap: 1.5rem;
+  gap: 1rem;
+  margin-top: 2rem;/*og 1*/
+  flex-wrap: nowrap;/*added no-to-wrap THIS BUG*/
+  max-width: 100%; /*added*/
+  overflow-x: auto;/*added*/
+  padding: 0 0.5rem; /*enabled*/
+  box-sizing: border-box;
+  scrollbar-width: none;
+    /*excess*/
   font-size: 1.5rem;
-  margin-top: 1rem;
   color: #3A3A3A;
   font-family: 'Playfair Display', serif;
 }
 
+/*Chrome, Safari*/
+/*
+.countdown-timer::-webkit-scrollbar {
+  display: none;  
+}
+*/
 .countdown-timer div {
-  background: #fff;
-  color: #3A3A3A;
-  padding: 1rem 1.5rem;
+  background-color: #fff;
+  /*color: #3A3A3A;*/
+  padding: 1rem; /*og 1.5* <<removed */
   border-radius: 12px;
-  min-width: 100px;
-  font-size: 1.3rem;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+  font-size: 1.1rem;
+  min-width: 80px; /*og 100*/
+  box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  flex: 0 0 auto;
 }
 
 /* ======================================

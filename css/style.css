@@ -149,7 +149,7 @@ section {
 }
 
 /* ======================================
-    CO U N T D O W N
+    C O U N T D O W N
   =======================================  */
 
 #countdown-section {
@@ -342,6 +342,139 @@ section {
   border-radius: 25px;
   box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
 }
+
+/* ======================================
+  C O L L U M N  H O R I Z A N T A L
+====================================== */
+
+/*
+.image-strip {
+  background-color: #F8F9F4;
+  padding: 2rem 0;
+  overflow-x: auto;
+}
+
+.image-column {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+}
+
+.image-column img {
+  width: 100%;
+  max-width: 250px;
+  height: 180px;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.image-column img:hover {
+  transform: scale(1.03);
+}
+*/
+
+/* ======================================
+  C O L L U M N  V E R T I C A L
+====================================== */
+
+/*
+
+.image-columns {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding: 3rem 2rem;
+  background-color: #E9EDC9;
+}
+
+.col-img img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+  
+*/
+
+/* ======================================
+  C O L L A B O R A T I O N S
+  C A N V A
+====================================== */
+
+..alt-columns {
+  background-color: #F8F9F4;
+  padding: 4rem 2rem;
+}
+
+.alt-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.alt-image {
+  flex: 1 1 45%;
+}
+
+.alt-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.05);
+  object-fit: cover;
+}
+
+.alt-text {
+  flex: 1 1 45%;
+  font-family: 'Georgia', serif;
+  color: #3A3A3A;
+}
+
+.alt-text h3 {
+  font-size: 1.8rem;
+  color: #588157;
+  margin-bottom: 1rem;
+}
+
+.alt-text p {
+  font-size: 1.05rem;
+  line-height: 1.6;
+}
+
+/* Responsive stack on mobile */
+@media (max-width: 768px) {
+  .alt-row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .alt-text, .alt-image {
+    flex: 1 1 100%;
+  }
+}
+
+/* ======================================
+  Canva Section Transiotion
+====================================== */
+
+.-columns {
+  margin-top: -80px; /* overlaps the previous section */
+  position: relative;
+  z-index: 1;
+  padding-top: 120px; /* creates space inside */
+  background-color: #F8F9F4;
+  border-top-left-radius: 40px;
+  border-top-right-radius: 40px;
+}
+
 
 /* ======================================
   HERO SECTION Index_html

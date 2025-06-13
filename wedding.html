@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Garce & Darwin</title>
+  <title>Grace & Darwin</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css">
@@ -97,22 +97,36 @@
 
   </section>
 
+<!-- COLUMN IMAGE STRIP
+
+<section class="horizontal image-strip">
+  <div class="image-column">
+    <img src="img/couple-1.jpg" alt="Grace & Darwin">
+    <img src="img/couple-2.jpg" alt="Wedding prep">
+    <img src="img/couple-3.jpg" alt="Ceremony">
+  </div>
+</section>
+
+-->
+
   <section class="text-center p-5 bg-light">
 
     <div class="d-flex justify-content-center gap-4">
-    <section id="countdown-section">
-      <h2>Countdown to the Big Day</h2>
-        <div id="countdown" class="countdown-timer">
-          <div><strong>0</strong><br>Days</div>
-          <div><strong>0</strong><br>Hours</div>
-          <div><strong>0</strong><br>Minutes</div>
-          <div><strong>0</strong><br>Seconds</div>
-        </div>
-    </section>
+      <section id="countdown-section">
+       <h2>Countdown to the Big Day</h2>
+          <div id="countdown" class="countdown-timer">
+            <div><strong>0</strong><br>Days</div>
+            <div><strong>0</strong><br>Hours</div>
+            <div><strong>0</strong><br>Minutes</div>
+            <div><strong>0</strong><br>Seconds</div>
+          </div>
+      </section>
     </div>
 
 
   </section>
+
+  <!-- BRIDE AND GROOM STORY-->
 
 <section id="story" class="container py-5">
     <h2 class="text-center">Our Story <br> A Love Written by God</h2>
@@ -157,13 +171,13 @@
         <div class="collapsible-text">
         <p>
           Our story began when I saw Grace again at church. I'd known her since high school — she was a year ahead of me, calm and unforgettable in the library. I had a small crush on her then, never imagining our paths would cross again.
-I was 33 when we reconnected through our faith community. Our first real conversation happened over lunch with churchmates, and I was completely drawn in by her genuine way of speaking. Later, we played badminton, and I found courage to talk to her more deeply. It was only a few minutes, but time felt like it stood still.
-I started pursuing her, but she seemed hesitant. When I heard someone else was pursuing her, I stepped back and respected her space, 
+          I was 33 when we reconnected through our faith community. Our first real conversation happened over lunch with churchmates, and I was completely drawn in by her genuine way of speaking. Later, we played badminton, and I found courage to talk to her more deeply. It was only a few minutes, but time felt like it stood still.
+          I started pursuing her, but she seemed hesitant. When I heard someone else was pursuing her, I stepped back and respected her space, 
           <span class="more-text hidden">believing that if something was meant for me, it would come in the right time. Even then, my feelings quietly grew.
-When I was set to leave for Cavite for work, Grace sent me a message: "Kung kailan nagiging close na tayo, saka ka naman aalis." That one sentence stopped me in my tracks. It only took me four hours in Cavite to realize I couldn't ignore what I was feeling. I packed up and returned to Sorsogon, trusting that God was guiding every step.
-When I got back, Grace was looking for me. Over lunch, I formally confessed that I liked her. She smiled and said, "Let's see where this takes us." It was real and full of possibility. Soon after, I spoke to her parents, asking to formally court her with sincerity and respect.
-We shared a month of meaningful courtship filled with conversations and prayers that brought us closer. On September 8, 2024, she said yes to being my girlfriend. I gave her a promise ring — a symbol of my commitment to build something lasting.
-On December 28, 2024, I proposed at Rizal Beach Resort with her family present. When I asked, "Will you marry me?" she said yes. It was the start of forever, and I thank God every day for writing a love story far greater than I ever imagined.
+          When I was set to leave for Cavite for work, Grace sent me a message: "Kung kailan nagiging close na tayo, saka ka naman aalis." That one sentence stopped me in my tracks. It only took me four hours in Cavite to realize I couldn't ignore what I was feeling. I packed up and returned to Sorsogon, trusting that God was guiding every step.
+          When I got back, Grace was looking for me. Over lunch, I formally confessed that I liked her. She smiled and said, "Let's see where this takes us." It was real and full of possibility. Soon after, I spoke to her parents, asking to formally court her with sincerity and respect.
+          We shared a month of meaningful courtship filled with conversations and prayers that brought us closer. On September 8, 2024, she said yes to being my girlfriend. I gave her a promise ring — a symbol of my commitment to build something lasting.
+          On December 28, 2024, I proposed at Rizal Beach Resort with her family present. When I asked, "Will you marry me?" she said yes. It was the start of forever, and I thank God every day for writing a love story far greater than I ever imagined.
           </span>
         </p>
           <button class="toggle-btn">Read more</button>
@@ -176,16 +190,66 @@ On December 28, 2024, I proposed at Rizal Beach Resort with her family present. 
   </div>
 </section>
 
-<!-- G A L L E R Y
-  <section class="container py-5">
-    <h2 class="text-center">Gallery</h2>
-    <div class="row">
-      <div class="col-md-4 mb-3">
-        <a href="img/1.jpg" data-lightbox="wedding"><img src="img/1.jpg" class="img-fluid rounded" /></a>
+<!-- GALLERY SECTION -->
+  <section id="gallery">
+  <div class="gallery-container">
+    <h2>Captured Moments</h2>
+
+    <button id="toggleView" class="gallery-toggle">Switch to Grid View</button>
+
+    <div class="carousel-view active" id="carouselView">
+      <div class="carousel-track">
+        <img src="img/gallery-1.jpg" alt="Moment 1">
+        <img src="img/gallery-2.jpg" alt="Moment 2">
+        <img src="img/gallery-3.jpg" alt="Moment 3">
+        <img src="img/gallery-4.jpg" alt="Moment 4">
+        <img src="img/gallery-5.jpg" alt="Moment 5">
+        <img src="img/gallery-6.jpg" alt="Moment 6">
       </div>
     </div>
-  </section>
--->
+
+    <div class="grid-view" id="gridView">
+      <img src="img/gallery-1.jpg" alt="Moment 1">
+      <img src="img/gallery-2.jpg" alt="Moment 2">
+      <img src="img/gallery-3.jpg" alt="Moment 3">
+      <img src="img/gallery-4.jpg" alt="Moment 4">
+      <img src="img/gallery-5.jpg" alt="Moment 5">
+      <img src="img/gallery-6.jpg" alt="Moment 6">
+    </div>
+  </div>
+</section>
+
+
+<!--C O L U M N WEDDING DETAILS-->
+<section class="alt-columns">
+  <div class="alt-row">
+    <div class="alt-image">
+      <div class="image-with-caption">
+        <div style="position: relative; width: 100%; height: 0; padding-top: 140.9524%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAGqIU40Zk0/l7QNaPVOF8u5Z5Vd87Pzkg/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGqIU40Zk0&#x2F;l7QNaPVOF8u5Z5Vd87Pzkg&#x2F;view?utm_content=DAGqIU40Zk0&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Grace and Darwin - Gift Guide</a> by Publication ORDS
+        <p class="caption">Under the stars in Bulusan — the moment she said yes.</p>
+      </div>
+    </div>
+    <div class="alt-image">
+      <h3>The Proposal</h3>
+      <div style="position: relative; width: 100%; height: 0; padding-top: 140.9524%;
+ padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
+ border-radius: 8px; will-change: transform;">
+  <iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
+    src="https://www.canva.com/design/DAGqIPeqtiA/1TXEK2xcVwKQ_DCbINGvjw/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
+  </iframe>
+</div>
+<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAGqIPeqtiA&#x2F;1TXEK2xcVwKQ_DCbINGvjw&#x2F;view?utm_content=DAGqIPeqtiA&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Grace and Darwin - Wedding Attire Guide</a> by Publication ORDS
+    </div>
+  </div>
+</section>
+
 
   <section id="rsvp" class="text-center container py-5">
     <div class="rsvp-container">

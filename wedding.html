@@ -80,7 +80,7 @@
 
       <div class="detail-box">
         <h3>Attire</h3>
-        <p>Primary Sponsors: Barong & Sage Formal Dress<br>
+        <p>Primary Sponsors: Barong & Sage Green Formal Dress<br>
         Guests: Semi-formal or Formal</p>
       </div>
 
@@ -96,18 +96,6 @@
   </div>
 
   </section>
-
-<!-- COLUMN IMAGE STRIP
-
-<section class="horizontal image-strip">
-  <div class="image-column">
-    <img src="img/couple-1.jpg" alt="Grace & Darwin">
-    <img src="img/couple-2.jpg" alt="Wedding prep">
-    <img src="img/couple-3.jpg" alt="Ceremony">
-  </div>
-</section>
-
--->
 
   <section class="text-center p-5 bg-light">
 
@@ -199,22 +187,60 @@
 
     <div class="carousel-view active" id="carouselView">
       <div class="carousel-track">
-        <img src="img/gallery-1.jpg" alt="Moment 1">
-        <img src="img/gallery-2.jpg" alt="Moment 2">
-        <img src="img/gallery-3.jpg" alt="Moment 3">
-        <img src="img/gallery-4.jpg" alt="Moment 4">
-        <img src="img/gallery-5.jpg" alt="Moment 5">
-        <img src="img/gallery-6.jpg" alt="Moment 6">
+        <img src="img/gllry/gallery1.jpg" alt="Moment 1">
+        <img src="img/gllry/gallery2.jpg" alt="Moment 2">
+        <img src="img/gllry/gallery3.jpg" alt="Moment 3">
+        <img src="img/gllry/gallery4.jpg" alt="Moment 4">
+        <img src="img/gllry/gallery5.jpg" alt="Moment 5">
+        <img src="img/gllry/gallery6.jpg" alt="Moment 6">
+        <img src="img/gllry/gallery7.jpg" alt="Moment 7">
+        <img src="img/gllry/gallery8.jpg" alt="Moment 8">
+        <img src="img/gllry/gallery9.jpg" alt="Moment 9">
+        <img src="img/gllry/gallery10.jpg" alt="Moment 10">
+        <img src="img/gllry/gallery12.jpg" alt="Moment 12">
+        <img src="img/gllry/gallery13.jpg" alt="Moment 13">
+        <img src="img/gllry/gallery14.jpg" alt="Moment 14">
+        <img src="img/gllry/gallery15.jpg" alt="Moment 15">
+        <img src="img/gllry/gallery16.jpg" alt="Moment 16">
+        <img src="img/gllry/gallery17.jpg" alt="Moment 17">
+        <img src="img/gllry/gallery18.jpg" alt="Moment 18">
+        <img src="img/gllry/gallery19.jpg" alt="Moment 19">
+        <img src="img/gllry/gallery20.jpg" alt="Moment 20">
+        <img src="img/gllry/gallery21.jpg" alt="Moment 21">
+        <img src="img/gllry/gallery22.jpg" alt="Moment 22">
+        <img src="img/gllry/gallery23.jpg" alt="Moment 23">
+        <img src="img/gllry/gallery24.jpg" alt="Moment 24">
+        <img src="img/gllry/gallery25.jpg" alt="Moment 25">
+        <img src="img/gllry/gallery26.jpg" alt="Moment 26">
       </div>
     </div>
 
     <div class="grid-view" id="gridView">
-      <img src="img/gallery-1.jpg" alt="Moment 1">
-      <img src="img/gallery-2.jpg" alt="Moment 2">
-      <img src="img/gallery-3.jpg" alt="Moment 3">
-      <img src="img/gallery-4.jpg" alt="Moment 4">
-      <img src="img/gallery-5.jpg" alt="Moment 5">
-      <img src="img/gallery-6.jpg" alt="Moment 6">
+      <img src="img/gllry/gallery1.jpg" alt="Moment 1">
+        <img src="img/gllry/gallery2.jpg" alt="Moment 2">
+        <img src="img/gllry/gallery3.jpg" alt="Moment 3">
+        <img src="img/gllry/gallery4.jpg" alt="Moment 4">
+        <img src="img/gllry/gallery5.jpg" alt="Moment 5">
+        <img src="img/gllry/gallery6.jpg" alt="Moment 6">
+        <img src="img/gllry/gallery7.jpg" alt="Moment 7">
+        <img src="img/gllry/gallery8.jpg" alt="Moment 8">
+        <img src="img/gllry/gallery9.jpg" alt="Moment 9">
+        <img src="img/gllry/gallery10.jpg" alt="Moment 10">
+        <img src="img/gllry/gallery12.jpg" alt="Moment 12">
+        <img src="img/gllry/gallery13.jpg" alt="Moment 13">
+        <img src="img/gllry/gallery14.jpg" alt="Moment 14">
+        <img src="img/gllry/gallery15.jpg" alt="Moment 15">
+        <img src="img/gllry/gallery16.jpg" alt="Moment 16">
+        <img src="img/gllry/gallery17.jpg" alt="Moment 17">
+        <img src="img/gllry/gallery18.jpg" alt="Moment 18">
+        <img src="img/gllry/gallery19.jpg" alt="Moment 19">
+        <img src="img/gllry/gallery20.jpg" alt="Moment 20">
+        <img src="img/gllry/gallery21.jpg" alt="Moment 21">
+        <img src="img/gllry/gallery22.jpg" alt="Moment 22">
+        <img src="img/gllry/gallery23.jpg" alt="Moment 23">
+        <img src="img/gllry/gallery24.jpg" alt="Moment 24">
+        <img src="img/gllry/gallery25.jpg" alt="Moment 25">
+        <img src="img/gllry/gallery26.jpg" alt="Moment 26">
     </div>
   </div>
 </section>
@@ -321,5 +347,19 @@
   <script src="js/countdown.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
   <script src="js/script.js"></script>
+
+  <!--GALLERY SCRIPT-->
+  <script>
+  document.getElementById('toggleView').onclick = function () {
+    const carousel = document.getElementById('carouselView');
+    const grid = document.getElementById('gridView');
+    const isGrid = grid.classList.toggle('active');
+    carousel.classList.toggle('active', !isGrid);
+    this.textContent = isGrid ? 'Switch to Carousel View' : 'Switch to Grid View';
+  };
+</script>
+
+
+
 </body>
 </html>

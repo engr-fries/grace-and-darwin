@@ -6,25 +6,40 @@
   <title>You’re Invited</title>
   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
   <style>
-    body {
-      background: url('img/Intro - Grace and Darwin - Wedding Website Invitation.mp4') center/cover no-repeat;
-      font-family: 'Playfair Display', serif;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      height: 100vh;
+    * {
       margin: 0;
-      color: white;
+      padding: 0;
+      box-sizing: border-box;
     }
 
+    html, body {
+      height: 100%;
+      font-family: 'Playfair Display', serif;
+      color: white;
+      overflow: hidden;
+    }
+
+    /* 🎥 Video Background */
+    .video-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100vw;
+      height: 100vh;
+      object-fit: cover;
+      z-index: -2;
+    }
+
+    /* 🔲 Dark overlay */
     body::before {
       content: '';
-      position: absolute;
+      position: fixed;
       inset: 0;
       background: rgba(0, 0, 0, 0.5);
-      z-index: 0;
+      z-index: -1;
     }
 
+    /* ✨ Fade-out animation */
     .fade-out {
       position: fixed;
       top: 0; left: 0;
@@ -35,14 +50,27 @@
       pointer-events: none;
       z-index: 9999;
     }
+
     .fade-out.active {
       opacity: 1;
     }
 
+    /* 🌸 Main content */
     .content {
-      text-align: center;
       position: relative;
       z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 1rem;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
     }
 
     .btn {
@@ -55,23 +83,24 @@
       cursor: pointer;
       transition: background 0.3s ease;
     }
+
     .btn:hover {
       background: #588157;
-    }
-
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.4);
     }
   </style>
 </head>
 <body>
+
+  <!-- 🎥 Background Video -->
+  <video autoplay muted loop class="video-bg">
+    <source src="img/Intro - Grace and Darwin - Wedding Website Invitation.mp4" type="video/mp4" />
+    Your browser does not support the video tag.
+  </video>
+
+  <!-- 💬 Foreground Content -->
   <div class="content">
-    <div style="text-align:center;">
-      <h1>You’re Invited</h1>
-      <button class="btn" onclick="proceed()">Open Invitation</button>
-    </div>
+    <h1>You’re Invited</h1>
+    <button class="btn" onclick="proceed()">Open Invitation</button>
     <div class="fade-out" id="fade"></div>
   </div>
 

@@ -69,12 +69,12 @@
     }
 
     .btn {
-      padding: 1rem 2rem;
+      padding: 1rem 2.5rem;
       background: #A3B18A;
       border: none;
-      border-radius: 5px;
+      border-radius: 8px;
       color: white;
-      font-size: 1.2rem;
+      font-size: 1.4rem;
       cursor: pointer;
       transition: background 0.3s ease;
     }
@@ -82,12 +82,29 @@
     .btn:hover {
       background: #588157;
     }
+
+    @media (max-width: 480px) {
+      .btn {
+        padding: 0.9rem 2rem;
+        font-size: 1.1rem;
+      }
+      .content {
+        padding-bottom: 60px;
+      }
+    }
+
+    @media (max-height: 500px) {
+      .btn {
+        font-size: 1rem;
+        padding: 0.8rem 1.5rem;
+      }
+    }
   </style>
 </head>
 <body>
 
   <!-- 🎥 Background Video -->
-  <video autoplay muted loop class="video-bg">
+  <video autoplay muted loop playsinline class="video-bg">
     <source src="img/Intro - Grace and Darwin - Wedding Website Invitation.mp4" type="video/mp4" />
     Your browser does not support the video tag.
   </video>

@@ -426,72 +426,173 @@
 </section>
 
 <!-- GALLERY SECTION -->
-  <section id="gallery">
-  <div class="gallery-container">
-    <h2>Captured Moments</h2>
+<section id="gallery">
+  <div class="gallery-container container py-5 text-center">
+    <h2 class="mb-4">Captured Moments</h2>
 
-    <button id="toggleView" class="gallery-toggle">Switch to Grid View</button>
+    <button id="toggleView" class="gallery-toggle btn btn-outline-secondary mb-4">Switch to Grid View</button>
 
+    <!-- Carousel View -->
     <div class="carousel-view active" id="carouselView">
-      <div class="carousel-track">
-        <img src="img/gllry/gallery1.jpg" alt="Moment 1">
-        <img src="img/gllry/gallery2.jpg" alt="Moment 2">
-        <img src="img/gllry/gallery3.jpg" alt="Moment 3">
-        <img src="img/gllry/gallery4.jpg" alt="Moment 4">
-        <img src="img/gllry/gallery5.jpg" alt="Moment 5">
-        <img src="img/gllry/gallery6.jpg" alt="Moment 6">
-        <img src="img/gllry/gallery7.jpg" alt="Moment 7">
-        <img src="img/gllry/gallery8.jpg" alt="Moment 8">
-        <img src="img/gllry/gallery9.jpg" alt="Moment 9">
-        <img src="img/gllry/gallery10.jpg" alt="Moment 10">
-        <img src="img/gllry/gallery12.jpg" alt="Moment 12">
-        <img src="img/gllry/gallery13.jpg" alt="Moment 13">
-        <img src="img/gllry/gallery14.jpg" alt="Moment 14">
-        <img src="img/gllry/gallery15.jpg" alt="Moment 15">
-        <img src="img/gllry/gallery16.jpg" alt="Moment 16">
-        <img src="img/gllry/gallery17.jpg" alt="Moment 17">
-        <img src="img/gllry/gallery18.jpg" alt="Moment 18">
-        <img src="img/gllry/gallery19.jpg" alt="Moment 19">
-        <img src="img/gllry/gallery20.jpg" alt="Moment 20">
-        <img src="img/gllry/gallery21.jpg" alt="Moment 21">
-        <img src="img/gllry/gallery22.jpg" alt="Moment 22">
-        <img src="img/gllry/gallery23.jpg" alt="Moment 23">
-        <img src="img/gllry/gallery24.jpg" alt="Moment 24">
-        <img src="img/gllry/gallery25.jpg" alt="Moment 25">
-        <img src="img/gllry/gallery26.jpg" alt="Moment 26">
+      <div class="carousel-track d-flex overflow-auto gap-3 p-2">
+        <!-- Repeat only a few images for performance preview -->
+        <img src="img/gllry/gallery1.jpg" alt="Moment 1" class="gallery-img">
+        <img src="img/gllry/gallery2.jpg" alt="Moment 2" class="gallery-img">
+        <img src="img/gllry/gallery3.jpg" alt="Moment 3" class="gallery-img">
+        <!-- Add lazy loading -->
+        <img src="img/gllry/gallery4.jpg" alt="Moment 4" class="gallery-img" loading="lazy">
+        <img src="img/gllry/gallery5.jpg" alt="Moment 5" class="gallery-img" loading="lazy">
+        <img src="img/gllry/gallery6.jpg" alt="Moment 6" class="gallery-img" loading="lazy">
+        <img src="img/gllry/gallery7.jpg" alt="Moment 7" class="gallery-img" loading="lazy">
+        <img src="img/gllry/gallery8.jpg" alt="Moment 8" class="gallery-img" loading="lazy">
+        <img src="img/gllry/gallery9.jpg" alt="Moment 9" class="gallery-img" loading="lazy">
+        <img src="img/gllry/gallery10.jpg" alt="Moment 10" class="gallery-img" loading="lazy">
+        <img src="img/gllry/gallery11.jpg" alt="Moment 11" class="gallery-img" loading="lazy">
+        <img src="img/gllry/gallery12.jpg" alt="Moment 12" class="gallery-img" loading="lazy">
+        <img src="img/gllry/gallery13.jpg" alt="Moment 13" class="gallery-img" loading="lazy">
+        <img src="img/gllry/gallery14.jpg" alt="Moment 14" class="gallery-img" loading="lazy">
+        <img src="img/gllry/gallery15.jpg" alt="Moment 15" class="gallery-img" loading="lazy">
+        <img src="img/gllry/gallery16.jpg" alt="Moment 16" class="gallery-img" loading="lazy">
+        <img src="img/gllry/gallery17.jpg" alt="Moment 17" class="gallery-img" loading="lazy">
+        <img src="img/gllry/gallery18.jpg" alt="Moment 18" class="gallery-img" loading="lazy">
+        <img src="img/gllry/gallery19.jpg" alt="Moment 19" class="gallery-img" loading="lazy">
+        <img src="img/gllry/gallery20.jpg" alt="Moment 20" class="gallery-img" loading="lazy">
+        <img src="img/gllry/gallery21.jpg" alt="Moment 21" class="gallery-img" loading="lazy">
+        <img src="img/gllry/gallery22.jpg" alt="Moment 22" class="gallery-img" loading="lazy">
+        <img src="img/gllry/gallery23.jpg" alt="Moment 23" class="gallery-img" loading="lazy">
+        <img src="img/gllry/gallery24.jpg" alt="Moment 24" class="gallery-img" loading="lazy">
+        <img src="img/gllry/gallery25.jpg" alt="Moment 25" class="gallery-img" loading="lazy">
+        <img src="img/gllry/gallery26.jpg" alt="Moment 26" class="gallery-img" loading="lazy">
+ 
+
+
+
+
+        <!-- Continue with lazy loading... -->
       </div>
     </div>
 
-    <div class="grid-view" id="gridView">
-      <img src="img/gllry/gallery1.jpg" alt="Moment 1">
-        <img src="img/gllry/gallery2.jpg" alt="Moment 2">
-        <img src="img/gllry/gallery3.jpg" alt="Moment 3">
-        <img src="img/gllry/gallery4.jpg" alt="Moment 4">
-        <img src="img/gllry/gallery5.jpg" alt="Moment 5">
-        <img src="img/gllry/gallery6.jpg" alt="Moment 6">
-        <img src="img/gllry/gallery7.jpg" alt="Moment 7">
-        <img src="img/gllry/gallery8.jpg" alt="Moment 8">
-        <img src="img/gllry/gallery9.jpg" alt="Moment 9">
-        <img src="img/gllry/gallery10.jpg" alt="Moment 10">
-        <img src="img/gllry/gallery12.jpg" alt="Moment 12">
-        <img src="img/gllry/gallery13.jpg" alt="Moment 13">
-        <img src="img/gllry/gallery14.jpg" alt="Moment 14">
-        <img src="img/gllry/gallery15.jpg" alt="Moment 15">
-        <img src="img/gllry/gallery16.jpg" alt="Moment 16">
-        <img src="img/gllry/gallery17.jpg" alt="Moment 17">
-        <img src="img/gllry/gallery18.jpg" alt="Moment 18">
-        <img src="img/gllry/gallery19.jpg" alt="Moment 19">
-        <img src="img/gllry/gallery20.jpg" alt="Moment 20">
-        <img src="img/gllry/gallery21.jpg" alt="Moment 21">
-        <img src="img/gllry/gallery22.jpg" alt="Moment 22">
-        <img src="img/gllry/gallery23.jpg" alt="Moment 23">
-        <img src="img/gllry/gallery24.jpg" alt="Moment 24">
-        <img src="img/gllry/gallery25.jpg" alt="Moment 25">
-        <img src="img/gllry/gallery26.jpg" alt="Moment 26">
+    <!-- Grid View -->
+    <div class="grid-view row g-3 d-none" id="gridView">
+      <!-- Looping only once for optimization demo -->
+      <div class="col-6 col-sm-4 col-md-3">
+        <img src="img/gllry/gallery1.jpg" alt="Moment 1" class="img-fluid rounded shadow-sm gallery-img" loading="lazy">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3">
+        <img src="img/gllry/gallery2.jpg" alt="Moment 2" class="img-fluid rounded shadow-sm gallery-img" loading="lazy">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3">
+        <img src="img/gllry/gallery3.jpg" alt="Moment 3" class="img-fluid rounded shadow-sm gallery-img" loading="lazy">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3">
+        <img src="img/gllry/gallery4.jpg" alt="Moment 4" class="img-fluid rounded shadow-sm gallery-img" loading="lazy">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3">
+        <img src="img/gllry/gallery5.jpg" alt="Moment 5" class="img-fluid rounded shadow-sm gallery-img" loading="lazy">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3">
+        <img src="img/gllry/gallery6.jpg" alt="Moment 6" class="img-fluid rounded shadow-sm gallery-img" loading="lazy">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3">
+        <img src="img/gllry/gallery7.jpg" alt="Moment 7" class="img-fluid rounded shadow-sm gallery-img" loading="lazy">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3">
+        <img src="img/gllry/gallery8.jpg" alt="Moment 8" class="img-fluid rounded shadow-sm gallery-img" loading="lazy">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3">
+        <img src="img/gllry/gallery9.jpg" alt="Moment 9" class="img-fluid rounded shadow-sm gallery-img" loading="lazy">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3">
+        <img src="img/gllry/gallery10.jpg" alt="Moment 10" class="img-fluid rounded shadow-sm gallery-img" loading="lazy">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3">
+        <img src="img/gllry/gallery11.jpg" alt="Moment 11" class="img-fluid rounded shadow-sm gallery-img" loading="lazy">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3">
+        <img src="img/gllry/gallery12.jpg" alt="Moment 12" class="img-fluid rounded shadow-sm gallery-img" loading="lazy">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3">
+        <img src="img/gllry/gallery13.jpg" alt="Moment 13" class="img-fluid rounded shadow-sm gallery-img" loading="lazy">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3">
+        <img src="img/gllry/gallery14.jpg" alt="Moment 14" class="img-fluid rounded shadow-sm gallery-img" loading="lazy">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3">
+        <img src="img/gllry/gallery15.jpg" alt="Moment 15" class="img-fluid rounded shadow-sm gallery-img" loading="lazy">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3">
+        <img src="img/gllry/gallery16.jpg" alt="Moment 16" class="img-fluid rounded shadow-sm gallery-img" loading="lazy">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3">
+        <img src="img/gllry/gallery17.jpg" alt="Moment 17" class="img-fluid rounded shadow-sm gallery-img" loading="lazy">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3">
+        <img src="img/gllry/gallery18.jpg" alt="Moment 18" class="img-fluid rounded shadow-sm gallery-img" loading="lazy">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3">
+        <img src="img/gllry/gallery19.jpg" alt="Moment 19" class="img-fluid rounded shadow-sm gallery-img" loading="lazy">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3">
+        <img src="img/gllry/gallery20.jpg" alt="Moment 20" class="img-fluid rounded shadow-sm gallery-img" loading="lazy">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3">
+        <img src="img/gllry/gallery21.jpg" alt="Moment 21" class="img-fluid rounded shadow-sm gallery-img" loading="lazy">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3">
+        <img src="img/gllry/gallery22.jpg" alt="Moment 22" class="img-fluid rounded shadow-sm gallery-img" loading="lazy">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3">
+        <img src="img/gllry/gallery23.jpg" alt="Moment 23" class="img-fluid rounded shadow-sm gallery-img" loading="lazy">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3">
+        <img src="img/gllry/gallery24.jpg" alt="Moment 24" class="img-fluid rounded shadow-sm gallery-img" loading="lazy">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3">
+        <img src="img/gllry/gallery25.jpg" alt="Moment 25" class="img-fluid rounded shadow-sm gallery-img" loading="lazy">
+      </div>
+      <div class="col-6 col-sm-4 col-md-3">
+        <img src="img/gllry/gallery26.jpg" alt="Moment 26" class="img-fluid rounded shadow-sm gallery-img" loading="lazy">
+      </div>
+      <!-- Add remaining images similarly -->
     </div>
   </div>
 </section>
 
+<style>
+  .gallery-img {
+    max-height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+    transition: transform 0.3s ease;
+  }
+
+  .gallery-img:hover {
+    transform: scale(1.03);
+  }
+
+  .carousel-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel-track {
+    scroll-behavior: smooth;
+  }
+</style>
+
+<script>
+  const toggleViewBtn = document.getElementById('toggleView');
+  const carouselView = document.getElementById('carouselView');
+  const gridView = document.getElementById('gridView');
+
+  toggleViewBtn.addEventListener('click', () => {
+    carouselView.classList.toggle('d-none');
+    gridView.classList.toggle('d-none');
+
+    toggleViewBtn.textContent = gridView.classList.contains('d-none')
+      ? 'Switch to Grid View'
+      : 'Switch to Carousel View';
+  });
+</script>
 <!--PROGRAM SECTION-->
 <section id="program" class="program-section py-5">
   <h2 class="text-center mb-4">Program Details</h2>

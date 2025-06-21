@@ -53,26 +53,87 @@
   </header>
 
 
-  <section id="welcome" class="welcome-section">
-  <h1 class="fade-in welcome-content">💍 Welcome! We’re Getting Married!</h1>
-  <p>Join us as we celebrate the beginning of our forever. We can’t wait to share this joyful day with the people we love most — and that includes you!</p>
-  <div class="wedding-details">
-      <div class="detail-box">
-        <h3>Date & Time</h3>
-        <p>August 2, 2025 · 3:00 PM</p>
+ <section id="welcome" class="welcome-section text-center py-5">
+  <div class="container">
+    <h1 class="welcome-heading mb-4">💍 Welcome! We’re Getting Married!</h1>
+    <p class="welcome-intro mb-5">
+      Join us as we celebrate the beginning of our forever. <br>
+      We can’t wait to share this joyful day with the people we love most — and that includes you!
+    </p>
+
+    <div class="wedding-details row justify-content-center mb-5">
+      <div class="col-md-4 detail-box mb-4">
+        <h3 class="detail-title">📅 Date & Time</h3>
+        <p class="detail-text">August 2, 2025 · 3:00 PM</p>
       </div>
-      <div class="detail-box">
-        <h3>Venue</h3>
-        <p>Fortune’s Hall, Bibincahan, Sorsogon City</p>
+      <div class="col-md-4 detail-box mb-4">
+        <h3 class="detail-title">📍 Venue</h3>
+        <p class="detail-text">Fortune’s Hall, Bibincahan,<br> Sorsogon City</p>
       </div>
     </div>
 
-    <blockquote>
-      “ And now these three remain: faith, hope and love. But the greatest of these is love.” — 1 Corinthians 13:13
+    <blockquote class="welcome-verse">
+      “And now these three remain: faith, hope and love. But the greatest of these is love.”<br>
+      <span class="verse-ref">— 1 Corinthians 13:13</span>
     </blockquote>
   </div>
+</section>
 
-  </section>
+<style>
+.welcome-section {
+  background: linear-gradient(to right, #fdfbfb, #ebedee);
+  padding: 4rem 1rem;
+}
+
+.welcome-heading {
+  font-family: 'Great Vibes', cursive;
+  font-size: 2.8rem;
+  color: #8c6b58;
+}
+
+.welcome-intro {
+  font-size: 1.2rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.detail-box {
+  background: #fff;
+  border: 2px solid #eee;
+  padding: 1.5rem;
+  border-radius: 12px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+}
+
+.detail-title {
+  font-size: 1.3rem;
+  font-weight: bold;
+  color: #3c3c3c;
+  margin-bottom: 0.5rem;
+}
+
+.detail-text {
+  font-size: 1.1rem;
+  color: #666;
+}
+
+.welcome-verse {
+  font-style: italic;
+  font-size: 1.2rem;
+  color: #555;
+  margin-top: 3rem;
+  line-height: 1.6;
+}
+
+.verse-ref {
+  display: block;
+  margin-top: 0.5rem;
+  font-weight: bold;
+  color: #888;
+}
+</style>
+
 
   <section class="text-center p-5 bg-light">
 

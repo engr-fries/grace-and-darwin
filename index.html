@@ -121,12 +121,6 @@
 
   <script>
     function proceed() {
-      const audio = document.getElementById('bg-music');
-
-    // Try to play music on button click (allowed by most browsers)
-      audio.play().catch(err => {
-      console.log("Autoplay failed:", err);
-        });
       document.getElementById('fade').classList.add('active');
       setTimeout(() => {
         window.location.href = 'wedding.html';

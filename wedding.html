@@ -185,62 +185,70 @@
 </style>
 
 
- <section id="countdown-section" class="text-center py-5 bg-light">
+<section class="countdown-wrapper text-center py-5">
   <div class="container">
-    <h2 class="mb-4 display-5">⏳ Countdown to the Big Day</h2>
-
-    <div id="countdown" class="row justify-content-center g-3 countdown-timer">
-      <div class="col-6 col-sm-3">
-        <div class="countdown-box">
-          <strong id="days">0</strong>
-          <span>Days</span>
-        </div>
+    <h2 class="mb-4 animate-zoom-in">⏳ Countdown to the Big Day</h2>
+    <div id="countdown" class="countdown-timer d-flex justify-content-center flex-wrap gap-3">
+      <div class="countdown-box">
+        <strong>0</strong><br><span>Days</span>
       </div>
-      <div class="col-6 col-sm-3">
-        <div class="countdown-box">
-          <strong id="hours">0</strong>
-          <span>Hours</span>
-        </div>
+      <div class="countdown-box">
+        <strong>0</strong><br><span>Hours</span>
       </div>
-      <div class="col-6 col-sm-3">
-        <div class="countdown-box">
-          <strong id="minutes">0</strong>
-          <span>Minutes</span>
-        </div>
+      <div class="countdown-box">
+        <strong>0</strong><br><span>Minutes</span>
       </div>
-      <div class="col-6 col-sm-3">
-        <div class="countdown-box">
-          <strong id="seconds">0</strong>
-          <span>Seconds</span>
-        </div>
+      <div class="countdown-box">
+        <strong>0</strong><br><span>Seconds</span>
       </div>
     </div>
   </div>
 </section>
+
 <style>
-.countdown-timer .countdown-box {
-  background: #fff;
-  border: 2px solid #dee2e6;
+.countdown-wrapper {
+  background: url('img/floral-border.png') center/cover no-repeat;
+  background-color: #fffefc;
+  position: relative;
+  overflow: hidden;
+}
+
+.animate-zoom-in {
+  animation: zoomIn 1s ease-out;
+}
+
+@keyframes zoomIn {
+  0% { transform: scale(0.9); opacity: 0; }
+  100% { transform: scale(1); opacity: 1; }
+}
+
+.countdown-timer {
+  margin-top: 1rem;
+}
+
+.countdown-box {
+  background-color: rgba(255, 255, 255, 0.85);
+  border: 2px solid #f4c4c4;
   border-radius: 12px;
-  padding: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.05);
+  padding: 20px 30px;
+  min-width: 100px;
+  font-size: 1.5rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
   transition: transform 0.3s ease;
 }
 
-.countdown-timer .countdown-box:hover {
-  transform: translateY(-5px);
+.countdown-box:hover {
+  transform: scale(1.05);
 }
 
-.countdown-timer strong {
+.countdown-box strong {
   font-size: 2.5rem;
-  display: block;
-  color: #6c4d3f;
-  font-family: 'Playfair Display', serif;
+  color: #b94c4c;
 }
 
-.countdown-timer span {
+.countdown-box span {
   font-size: 1rem;
-  color: #555;
+  color: #444;
   font-weight: 500;
 }
 </style>

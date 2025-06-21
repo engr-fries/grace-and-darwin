@@ -239,32 +239,32 @@
   <div class="stack-container">
 
     <div class="program-embed">
-      <div class="iframe-wrapper">
-        <img src="img/Entourage 1.png" alt="Entourage" class="img-fluid" allowfullscreen loading="lazy"></img>
+      <div class="image-wrapper">
+        <img src="img/Entourage 1.png" alt="Entourage" class="program-image" loading="lazy">
       </div>
     </div>
 
     <div class="program-embed">
-      <div class="iframe-wrapper">
-        <img src="img/Entourage 2.png" alt="Entourage" class="img-fluid" allowfullscreen loading="lazy"></img>
+      <div class="image-wrapper">
+        <img src="img/Entourage 2.png" alt="Entourage" class="program-image" loading="lazy">
       </div>
     </div>
 
     <div class="program-embed">
-      <div class="iframe-wrapper">
-        <img src="img/Grace and Darwin - Wedding Program.png" alt="Program" class="img-fluid" allowfullscreen loading="lazy"></img>
+      <div class="image-wrapper">
+        <img src="img/Grace and Darwin - Wedding Program.png" alt="Program" class="program-image" loading="lazy">
       </div>
     </div>
 
     <div class="program-embed">
-      <div class="iframe-wrapper">
-        <img src="img/Grace and Darwin - Wedding Attire Guide.png" alt="Attire" class="img-fluid" allowfullscreen loading="lazy"></img>
+      <div class="image-wrapper">
+        <img src="img/Grace and Darwin - Wedding Attire Guide.png" alt="Attire" class="program-image" loading="lazy">
       </div>
     </div>
 
     <div class="program-embed" id="gift">
-      <div class="iframe-wrapper">
-        <img src="img/Grace and Darwin - Gift Guide.png" alt="Attire" class="img-fluid" allowfullscreen loading="lazy"></img>
+      <div class="image-wrapper">
+        <img src="img/Grace and Darwin - Gift Guide.png" alt="Gift Guide" class="program-image" loading="lazy">
       </div>
     </div>
 
@@ -272,24 +272,34 @@
 </section>
 
 <style>
- .program-embed {
-  height: 100vh; /* Full screen height for each image block */
+.stack-container {
   display: flex;
-  align-items: center;
+  flex-direction: column;
+  gap: 2rem;
+  padding: 0 1rem;
+}
+
+.program-embed {
+  display: flex;
   justify-content: center;
-  overflow: hidden;
 }
 
 .image-wrapper {
   width: 100%;
-  height: 100%;
+  max-width: 720px;
+  padding: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  background: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .program-image {
   width: 100%;
-  height: 100%;
-  object-fit: cover; /* Fill the space without distortion */
+  height: auto;
+  object-fit: contain;
   display: block;
+  border-radius: 6px;
 }
 </style>
 

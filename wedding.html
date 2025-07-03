@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/css/lightbox.min.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap" >
+
 </head>
 
 <nav class="navbar">
@@ -427,6 +428,55 @@
 
 <!-- GALLERY SECTION -->
 
+<!-- GALLERY SECTION -->
+<section id="gallery" class="py-5 bg-light">
+  <div class="container text-center">
+    <h2 class="mb-4">📸 Captured Moments</h2>
+
+    <div id="weddingCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="3000" data-bs-pause="hover">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="img/gllry/gallery1.jpg" class="d-block w-100 rounded shadow gallery-img" alt="Moment 1">
+        </div>
+        <div class="carousel-item">
+          <img src="img/gllry/gallery2.jpg" class="d-block w-100 rounded shadow gallery-img" alt="Moment 2">
+        </div>
+        <div class="carousel-item">
+          <img src="img/gllry/gallery3.jpg" class="d-block w-100 rounded shadow gallery-img" alt="Moment 3">
+        </div>
+        <div class="carousel-item">
+          <img src="img/gllry/gallery4.jpg" class="d-block w-100 rounded shadow gallery-img" alt="Moment 4">
+        </div>
+        <!-- Add more images as needed -->
+      </div>
+
+      <!-- Controls -->
+      <button class="carousel-control-prev" type="button" data-bs-target="#weddingCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#weddingCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <!-- Fullscreen Modal -->
+  <div id="fullscreenModal" class="modal fade" tabindex="-1">
+    <div class="modal-dialog modal-fullscreen p-4">
+      <div class="modal-content bg-dark">
+        <div class="modal-header border-0">
+          <button type="button" class="btn-close btn-close-white ms-auto" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body d-flex justify-content-center align-items-center">
+          <img src="" alt="Enlarged View" id="modalImage" class="img-fluid rounded shadow">
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 
 
 <!--PROGRAM SECTION-->
@@ -634,6 +684,10 @@
 .collapsible-text {
   font-family: 'Lucida Handwriting', cursive;
 }
+#gallery img {
+  max-height: 500px;
+  object-fit: cover;
+}
 </style>
 
 
@@ -651,7 +705,18 @@
   <script src="js/countdown.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
   <script src="js/script.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+
+<script>
+  document.querySelectorAll('.gallery-img').forEach(img => {
+    img.addEventListener('click', () => {
+      const modalImg = document.getElementById('modalImage');
+      modalImg.src = img.src;
+      new bootstrap.Modal(document.getElementById('fullscreenModal')).show();
+    });
+  });
+</script>
 
 
 <audio id="bgMusic" src="img/PalagiPiano.mp3" preload="auto" loop></audio>

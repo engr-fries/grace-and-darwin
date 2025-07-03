@@ -506,6 +506,27 @@
   .carousel-img:hover {
     transform: scale(1.03);
   }
+  .carousel-view {
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+}
+
+.carousel-track {
+  display: flex;
+  flex-wrap: nowrap;
+  gap: 1rem;
+  padding: 1rem;
+  width: max-content;
+  scroll-behavior: smooth;
+}
+
+.carousel-track img {
+  max-height: 250px;
+  width: auto;
+  height: auto;
+}
+
 
   /* Fullscreen Modal */
   .modal {

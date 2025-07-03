@@ -556,10 +556,12 @@
       <!-- Add remaining images similarly -->
     </div>
   </div>
-  <div id="imageModal" class="modal" style="display:none;">
+<!-- Fullscreen Image Viewer Modal -->
+<div id="imageModal" class="modal" style="display:none;">
   <span class="close" id="closeModal">&times;</span>
   <img class="modal-content" id="modalImage">
-  </div>
+</div>
+
 </section>
 
 <style>
@@ -581,6 +583,20 @@
   .carousel-track {
     scroll-behavior: smooth;
   }
+/* Fullscreen Modal Styles */
+.modal {
+  display: none; 
+  position: fixed;
+  z-index: 1050;
+  padding-top: 60px;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: auto;
+  background-color: rgba(0,0,0,0.9);
+}
+
 /* Fullscreen Modal Styles */
 .modal {
   display: none; 
@@ -618,6 +634,7 @@
 .close:focus {
   color: #ccc;
 }
+
 </style>
 <!--PROGRAM SECTION-->
 <section id="program" class="program-section py-5">
@@ -850,7 +867,6 @@
     carousel.classList.toggle('active', !isGrid);
     this.textContent = isGrid ? 'Switch to Carousel View' : 'Switch to Grid View';
   };
-  // Fullscreen image viewer
   const modal = document.getElementById("imageModal");
   const modalImg = document.getElementById("modalImage");
   const closeBtn = document.getElementById("closeModal");

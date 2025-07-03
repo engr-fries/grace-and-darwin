@@ -427,129 +427,22 @@
 
 <!-- GALLERY SECTION -->
 <section id="gallery">
-  <!-- Carousel Title -->
-<h2 class="text-center mb-4">📸 Captured Moments</h2>
+  <div class="container-fluid py-5 text-center">
+    <h2 class="mb-4">📸 Captured Moments</h2>
 
-<!-- Carousel Container -->
-<div class="carousel-view">
-  <div class="carousel-track">
-    <!-- Replace these with your actual image paths -->
-    <img src="img/gllry/gallery1.jpg" alt="Moment 1" class="carousel-img">
-    <img src="img/gllry/gallery2.jpg" alt="Moment 2" class="carousel-img">
-    <img src="img/gllry/gallery3.jpg" alt="Moment 3" class="carousel-img">
-    <img src="img/gllry/gallery4.jpg" alt="Moment 4" class="carousel-img">
-    <img src="img/gllry/gallery5.jpg" alt="Moment 5" class="carousel-img">
+    <div class="carousel-view">
+      <div class="carousel-track">
+        <!-- Use your real images here -->
+        <img src="https://engr-fries.github.io/grace-and-darwin/img/gllry/gallery1.jpg" alt="Moment 1" class="carousel-img">
+        <img src="https://engr-fries.github.io/grace-and-darwin/img/gllry/gallery2.jpg" alt="Moment 2" class="carousel-img">
+        <img src="https://engr-fries.github.io/grace-and-darwin/img/gllry/gallery3.jpg" alt="Moment 3" class="carousel-img">
+        <img src="https://via.placeholder.com/300x200?text=test" alt="Test" class="carousel-img">
+      </div>
+    </div>
   </div>
-</div>
-
-<!-- Modal Viewer -->
-<div id="imageModal" class="carousel-modal">
-  <span class="carousel-close" id="closeModal">&times;</span>
-  <img class="carousel-modal-content" id="modalImage" alt="">
-</div>
-
-<!-- Carousel Styles -->
-<style>
-  .carousel-view {
-    overflow-x: auto;
-    white-space: nowrap;
-    width: 100%;
-    padding: 1rem;
-  }
-
-  .carousel-track {
-    display: flex;
-    flex-wrap: nowrap;
-    gap: 1rem;
-    width: max-content;
-    scroll-behavior: smooth;
-  }
-
-  .carousel-img {
-    flex: 0 0 auto;
-    height: 200px;
-    border-radius: 10px;
-    object-fit: cover;
-    transition: transform 0.3s ease;
-    cursor: pointer;
-  }
-
-  .carousel-img:hover {
-    transform: scale(1.05);
-  }
-
-  .carousel-view::-webkit-scrollbar {
-    display: none;
-  }
-
-  /* Modal Styles */
-  .carousel-modal {
-    display: none;
-    position: fixed;
-    inset: 0;
-    background-color: rgba(0, 0, 0, 0.85);
-    z-index: 9999;
-    justify-content: center;
-    align-items: center;
-  }
-
-  .carousel-modal-content {
-    max-width: 90vw;
-    max-height: 90vh;
-    border-radius: 12px;
-    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-  }
-
-  .carousel-close {
-    position: absolute;
-    top: 20px;
-    right: 30px;
-    font-size: 40px;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    z-index: 10000;
-  }
-
-  .carousel-close:hover {
-    color: #ccc;
-  }
-
-  @media (max-width: 600px) {
-    .carousel-img {
-      height: 150px;
-    }
-  }
-</style>
-
-<!-- Carousel JS -->
-<script>
-  const modal = document.getElementById("imageModal");
-  const modalImg = document.getElementById("modalImage");
-  const closeBtn = document.getElementById("closeModal");
-
-  document.querySelectorAll(".carousel-img").forEach(img => {
-    img.addEventListener("click", () => {
-      modal.style.display = "flex";
-      modalImg.src = img.src;
-      modalImg.alt = img.alt;
-    });
-  });
-
-  closeBtn.onclick = () => {
-    modal.style.display = "none";
-    modalImg.src = "";
-  };
-
-  window.addEventListener("click", (e) => {
-    if (e.target === modal) {
-      modal.style.display = "none";
-      modalImg.src = "";
-    }
-  });
-</script>
-
 </section>
+
+
 <!--PROGRAM SECTION-->
 <section id="program" class="program-section py-5">
   <h2 class="text-center mb-4">Program Details</h2>
@@ -634,6 +527,58 @@
 </section>
 
 <style>
+.carousel-view {
+  overflow-x: auto;
+  white-space: nowrap;
+  width: 100%;
+  background: #fafafa;
+  padding: 1rem 0;
+}
+
+.carousel-track {
+  display: inline-flex;
+  gap: 1rem;
+  padding-left: 1rem;
+}
+
+.carousel-img {
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s;
+}
+
+.carousel-img:hover {
+  transform: scale(1.03);
+}
+
+/* Fullscreen Modal */
+#imageModal {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+}
+
+#modalImage {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 8px;
+}
+
+#closeModal {
+  position: absolute;
+  top: 20px;
+  right: 30px;
+  font-size: 36px;
+  color: #fff;
+  cursor: pointer;
+}
 .rsvp-section {
   background: linear-gradient(to right, #f8f9fa, #fff);
 }
@@ -789,6 +734,25 @@
   // Start music on any interaction
   window.addEventListener('click', startMusic);
   window.addEventListener('touchstart', startMusic);
+</script>
+<div id="imageModal">
+  <span id="closeModal">&times;</span>
+  <img id="modalImage" alt="">
+</div>
+<script>
+  const modal = document.getElementById("imageModal"),
+        modalImg = document.getElementById("modalImage"),
+        closeBtn = document.getElementById("closeModal");
+
+  document.querySelectorAll(".carousel-img").forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "flex";
+      modalImg.src = img.src;
+    });
+  });
+
+  closeBtn.onclick = () => modal.style.display = "none";
+  window.onclick = e => { if (e.target === modal) modal.style.display = "none"; };
 </script>
 </body>
 </html>

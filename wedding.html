@@ -789,5 +789,49 @@
     }
   };
   </script>
+<button id="musicToggle" style="
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  z-index: 9999;
+  background: white;
+  border: none;
+  border-radius: 50%;
+  padding: 10px;
+  box-shadow: 0 0 8px rgba(0,0,0,0.3);
+  cursor: pointer;
+">
+  🔊
+</button>
+<audio id="bgMusic" src="img/Maki - Dilaw Lyrics (Framed).mp3" preload="auto" loop></audio>
+ <script>
+  const bgMusic = document.getElementById('bgMusic');
+  const musicToggle = document.getElementById('musicToggle');
+  let musicPlaying = false;
+
+  function toggleMusic() {
+    if (bgMusic.paused) {
+      bgMusic.play();
+      musicToggle.textContent = '🔊';
+    } else {
+      bgMusic.pause();
+      musicToggle.textContent = '🔇';
+    }
+    musicPlaying = !musicPlaying;
+  }
+
+  musicToggle.addEventListener('click', toggleMusic);
+
+  // Start music on first user interaction
+  function startMusic() {
+    if (!musicPlaying) {
+      bgMusic.play().catch(err => console.log("Autoplay blocked:", err));
+      musicPlaying = true;
+    }
+  }
+
+  window.addEventListener('click', startMusic, { once: true });
+  window.addEventListener('touchstart', startMusic, { once: true });
+</script>
 </body>
 </html>

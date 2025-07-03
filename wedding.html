@@ -490,56 +490,53 @@
   .carousel-track {
     scroll-behavior: smooth;
   }
-/* Fullscreen Modal Styles */
+/* Fullscreen Modal Base */
 .modal {
-  display: none; 
+  display: none;
   position: fixed;
   z-index: 1050;
-  padding-top: 60px;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: auto;
+  inset: 0;
   background-color: rgba(0,0,0,0.9);
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
 }
 
-/* Fullscreen Modal Styles */
-.modal {
-  display: none; 
-  position: fixed;
-  z-index: 1050;
-  padding-top: 60px;
-  left: 0;
-  top: 0;
-  width: 100vw;
-  height: 100vh;
-  overflow: auto;
-  background-color: rgba(0,0,0,0.9);
-}
-
-.modal-content {
-  display: block;
-  margin: auto;
-  max-width: 90%;
-  max-height: 80vh;
-  border-radius: 10px;
-}
-
+/* Close Button */
 .close {
   position: absolute;
   top: 20px;
-  right: 35px;
-  color: #fff;
+  right: 30px;
+  color: white;
   font-size: 40px;
   font-weight: bold;
   cursor: pointer;
-  z-index: 2000;
+  z-index: 1100;
 }
 
 .close:hover,
 .close:focus {
   color: #ccc;
+}
+
+/* Modal Content Wrapper */
+.modal-body {
+  max-width: 100%;
+  max-height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Image Styling */
+.modal-content {
+  max-width: 90vw;
+  max-height: 90vh;
+  width: auto;
+  height: auto;
+  border-radius: 10px;
+  object-fit: contain;
+  box-shadow: 0 0 20px rgba(255,255,255,0.2);
 }
 
 </style>

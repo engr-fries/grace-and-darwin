@@ -427,141 +427,129 @@
 
 <!-- GALLERY SECTION -->
 <section id="gallery">
-<h2>📸 Captured Moments</h2>
+  <!-- Carousel Title -->
+<h2 class="text-center mb-4">📸 Captured Moments</h2>
 
-  <div class="carousel-view">
-    <div class="carousel-track">
-      <!-- Replace these with your own images -->
-      <img src="https://via.placeholder.com/300x200?text=Image+1" alt="Image 1" class="carousel-img">
-      <img src="https://via.placeholder.com/300x200?text=Image+2" alt="Image 2" class="carousel-img">
-      <img src="https://via.placeholder.com/300x200?text=Image+3" alt="Image 3" class="carousel-img">
-      <img src="https://via.placeholder.com/300x200?text=Image+4" alt="Image 4" class="carousel-img">
-      <img src="https://via.placeholder.com/300x200?text=Image+5" alt="Image 5" class="carousel-img">
-      <img src="https://via.placeholder.com/300x200?text=Image+6" alt="Image 6" class="carousel-img">
-    </div>
+<!-- Carousel Container -->
+<div class="carousel-view">
+  <div class="carousel-track">
+    <!-- Replace these with your actual image paths -->
+    <img src="img/gllry/gallery1.jpg" alt="Moment 1" class="carousel-img">
+    <img src="img/gllry/gallery2.jpg" alt="Moment 2" class="carousel-img">
+    <img src="img/gllry/gallery3.jpg" alt="Moment 3" class="carousel-img">
+    <img src="img/gllry/gallery4.jpg" alt="Moment 4" class="carousel-img">
+    <img src="img/gllry/gallery5.jpg" alt="Moment 5" class="carousel-img">
   </div>
+</div>
 
-  <!-- Modal -->
-  <div id="imageModal" class="modal">
-    <span class="close" id="closeModal">&times;</span>
-    <img class="modal-content" id="modalImage" alt="">
-  </div>
-</section>
+<!-- Modal Viewer -->
+<div id="imageModal" class="carousel-modal">
+  <span class="carousel-close" id="closeModal">&times;</span>
+  <img class="carousel-modal-content" id="modalImage" alt="">
+</div>
+
+<!-- Carousel Styles -->
 <style>
-    body {
-      font-family: sans-serif;
-      margin: 0;
-      padding: 0;
-      background: #fefefe;
-    }
+  .carousel-view {
+    overflow-x: auto;
+    white-space: nowrap;
+    width: 100%;
+    padding: 1rem;
+  }
 
-    h2 {
-      text-align: center;
-      margin: 1.5rem 0;
-      font-size: 2rem;
-    }
+  .carousel-track {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    width: max-content;
+    scroll-behavior: smooth;
+  }
 
-    .carousel-view {
-      overflow-x: auto;
-      white-space: nowrap;
-      width: 100%;
-      padding: 1rem;
-    }
+  .carousel-img {
+    flex: 0 0 auto;
+    height: 200px;
+    border-radius: 10px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
 
-    .carousel-track {
-      display: flex;
-      flex-wrap: nowrap;
-      gap: 1rem;
-      width: max-content;
-      scroll-behavior: smooth;
-    }
+  .carousel-img:hover {
+    transform: scale(1.05);
+  }
 
+  .carousel-view::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Modal Styles */
+  .carousel-modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.85);
+    z-index: 9999;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .carousel-modal-content {
+    max-width: 90vw;
+    max-height: 90vh;
+    border-radius: 12px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+
+  .carousel-close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    font-size: 40px;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 10000;
+  }
+
+  .carousel-close:hover {
+    color: #ccc;
+  }
+
+  @media (max-width: 600px) {
     .carousel-img {
-      flex: 0 0 auto;
-      height: 200px;
-      border-radius: 10px;
-      object-fit: cover;
-      transition: transform 0.3s ease;
-      cursor: pointer;
+      height: 150px;
     }
+  }
+</style>
 
-    .carousel-img:hover {
-      transform: scale(1.05);
-    }
+<!-- Carousel JS -->
+<script>
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+  const closeBtn = document.getElementById("closeModal");
 
-    /* Hide scrollbar */
-    .carousel-view::-webkit-scrollbar {
-      display: none;
-    }
-
-    /* Fullscreen Modal */
-    .modal {
-      display: none;
-      position: fixed;
-      inset: 0;
-      background-color: rgba(0, 0, 0, 0.85);
-      z-index: 9999;
-      justify-content: center;
-      align-items: center;
-    }
-
-    .modal-content {
-      max-width: 90vw;
-      max-height: 90vh;
-      border-radius: 12px;
-      box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-    }
-
-    .close {
-      position: absolute;
-      top: 20px;
-      right: 30px;
-      font-size: 40px;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-    }
-
-    .close:hover {
-      color: #ccc;
-    }
-
-    @media (max-width: 600px) {
-      .carousel-img {
-        height: 150px;
-      }
-    }
-  </style>
-  <script>
-    const modal = document.getElementById("imageModal");
-    const modalImg = document.getElementById("modalImage");
-    const closeBtn = document.getElementById("closeModal");
-
-    document.querySelectorAll(".carousel-img").forEach(img => {
-      img.addEventListener("click", () => {
-        modal.style.display = "flex";
-        modalImg.src = img.src;
-        modalImg.alt = img.alt;
-      });
+  document.querySelectorAll(".carousel-img").forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "flex";
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
     });
+  });
 
-    closeBtn.onclick = () => {
+  closeBtn.onclick = () => {
+    modal.style.display = "none";
+    modalImg.src = "";
+  };
+
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
       modal.style.display = "none";
       modalImg.src = "";
-    };
+    }
+  });
+</script>
 
-    window.addEventListener("click", (e) => {
-      if (e.target === modal) {
-        modal.style.display = "none";
-        modalImg.src = "";
-      }
-    });
-  </script>
-  
-
-
-
-
+</section>
 <!--PROGRAM SECTION-->
 <section id="program" class="program-section py-5">
   <h2 class="text-center mb-4">Program Details</h2>

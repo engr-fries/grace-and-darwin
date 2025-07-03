@@ -427,12 +427,13 @@
 
 <!-- GALLERY SECTION -->
 <section id="gallery">
-  <div class="gallery-container container py-5 text-center">
+  <div class="gallery-container container-fluid py-5 text-center">
     <h2 class="mb-4">Captured Moments</h2>
-<!-- Carousel View -->
+
+    <!-- Carousel View -->
     <div class="carousel-view">
       <div class="carousel-track">
-        <!-- Repeat only a few images for performance preview -->
+        <!-- Sample Images -->
         <img src="img/gllry/gallery1.jpg" alt="Moment 1" class="gallery-img carousel-img">
         <img src="img/gllry/gallery2.jpg" alt="Moment 2" class="gallery-img carousel-img">
         <img src="img/gllry/gallery3.jpg" alt="Moment 3" class="gallery-img carousel-img">
@@ -461,99 +462,131 @@
         <img src="img/gllry/gallery26.jpg" alt="Moment 26" class="gallery-img carousel-img">
       </div>
     </div>
-
-<!-- Fullscreen Image Viewer Modal -->
-
-
+  </div>
 </section>
-<div id="imageModal" class="modal" style="display: none;">
+
+<!-- Fullscreen Modal Viewer (Place this OUTSIDE the gallery section) -->
+<div id="imageModal" class="modal">
   <span class="close" id="closeModal">&times;</span>
   <div class="modal-body">
     <img class="modal-content" id="modalImage" alt="">
   </div>
 </div>
 
+<!-- 💅 Styles -->
 <style>
-  .gallery-container {
-  width: 100%;
-  overflow: hidden;
-  }
   .carousel-view {
-  overflow-x: auto;
-  white-space: nowrap;
-}
-
-.carousel-track {
-  display: flex;
-  flex-wrap: nowrap;
-  gap: 1rem;
-  padding: 1rem;
-  scroll-behavior: smooth;
-  min-width: 100%;
-}
-
-.carousel-track::-webkit-scrollbar {
-  display: none;
-}
-
-.carousel-img {
-  flex: 0 0 auto;
-  height: 250px;
-  border-radius: 12px;
-  object-fit: cover;
-  transition: transform 0.3s ease;
-}
-
-.carousel-img:hover {
-  transform: scale(1.03);
-}
-.modal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  z-index: 1050;
-  background-color: rgba(0,0,0,0.9);
-  justify-content: center;
-  align-items: center;
-  padding: 1rem;
-}
-
-.modal-body {
-  max-width: 100%;
-  max-height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.modal-content {
-  max-width: 90vw;
-  max-height: 90vh;
-  width: auto;
-  height: auto;
-  border-radius: 10px;
-  object-fit: contain;
-  box-shadow: 0 0 20px rgba(255,255,255,0.2);
-}
-
-.close {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  color: white;
-  font-size: 40px;
-  font-weight: bold;
-  cursor: pointer;
-  z-index: 1100;
-}
-@media (max-width: 600px) {
-  .carousel-img {
-    height: 180px;
+    overflow-x: auto;
+    white-space: nowrap;
   }
-}
 
+  .carousel-track {
+    display: flex;
+    flex-wrap: nowrap;
+    gap: 1rem;
+    padding: 1rem;
+    min-width: 100%;
+    scroll-behavior: smooth;
+  }
 
+  .carousel-track::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel-img {
+    flex: 0 0 auto;
+    height: 250px;
+    border-radius: 12px;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+  }
+
+  .carousel-img:hover {
+    transform: scale(1.03);
+  }
+
+  /* Fullscreen Modal */
+  .modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    z-index: 1050;
+    background-color: rgba(0, 0, 0, 0.9);
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+  }
+
+  .modal-body {
+    max-width: 100%;
+    max-height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .modal-content {
+    max-width: 90vw;
+    max-height: 90vh;
+    width: auto;
+    height: auto;
+    object-fit: contain;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
+  }
+
+  .close {
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    z-index: 1100;
+  }
+
+  .close:hover {
+    color: #ccc;
+  }
+
+  @media (max-width: 600px) {
+    .carousel-img {
+      height: 180px;
+    }
+  }
 </style>
+
+<!-- 🔁 JavaScript -->
+<script>
+  const modal = document.getElementById("imageModal");
+  const modalImg = document.getElementById("modalImage");
+  const closeBtn = document.getElementById("closeModal");
+
+  // Open modal
+  document.querySelectorAll(".gallery-img").forEach(img => {
+    img.addEventListener("click", () => {
+      modal.style.display = "flex";
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
+    });
+  });
+
+  // Close modal
+  closeBtn.onclick = () => {
+    modal.style.display = "none";
+    modalImg.src = '';
+  };
+
+  // Close when clicking outside the image
+  window.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.style.display = "none";
+      modalImg.src = '';
+    }
+  });
+</script>
 <!--PROGRAM SECTION-->
 <section id="program" class="program-section py-5">
   <h2 class="text-center mb-4">Program Details</h2>
@@ -776,31 +809,7 @@
   <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.3/dist/js/lightbox.min.js"></script>
   <script src="js/script.js"></script>
 
-  <!--GALLERY SCRIPT-->
-  <script>
-  const modal = document.getElementById("imageModal");
-  const modalImg = document.getElementById("modalImage");
-  const closeBtn = document.getElementById("closeModal");
 
-  document.querySelectorAll(".gallery-img").forEach(img => {
-    img.addEventListener("click", () => {
-      modal.style.display = "flex";
-      modalImg.src = img.src;
-      modalImg.alt = img.alt;
-    });
-  });
-
-  closeBtn.onclick = () => {
-    modal.style.display = "none";
-  };
-
-  window.onclick = (e) => {
-    if (e.target === modal) {
-      modal.style.display = "none";
-      modalImg.src = '';
-    }
-  };
-  </script>
 
 <audio id="bgMusic" src="img/PalagiPiano.mp3" preload="auto" loop></audio>
  <script>

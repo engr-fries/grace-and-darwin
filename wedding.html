@@ -427,15 +427,15 @@
 
 <!-- GALLERY SECTION -->
 <section id="gallery">
-  <div id="imageModal" class="modal d-flex align-items-center justify-content-center" style="display: none;">
-  <span class="close position-absolute text-white fs-1" style="top: 20px; right: 30px; cursor: pointer;">&times;</span>
-  <img class="modal-content rounded shadow" id="modalImage" style="max-height: 90vh; max-width: 90vw;">
   <div class="gallery-container container py-5 text-center">
     <h2 class="mb-4">Captured Moments</h2>
 
     <button id="toggleView" class="gallery-toggle btn btn-outline-secondary mb-4">Switch to Grid View</button>
 
     <!-- Carousel View -->
+  <div id="imageModal" class="modal d-flex align-items-center justify-content-center" style="display: none;">
+  <span class="close position-absolute text-white fs-1" style="top: 20px; right: 30px; cursor: pointer;">&times;</span>
+  <img class="modal-content rounded shadow" id="modalImage" style="max-height: 90vh; max-width: 90vw;">
     <div class="carousel-view active" id="carouselView">
       <div class="carousel-track d-flex overflow-auto gap-3 p-2">
         <!-- Repeat only a few images for performance preview -->

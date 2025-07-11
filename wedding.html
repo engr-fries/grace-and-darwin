@@ -773,7 +773,13 @@
     <!-- Live Slideshow Placeholder -->
     <div class="slideshow-placeholder mb-5">
       <p class="text-muted">🌟 Live slideshow of uploaded photos will appear here soon!</p>
-      <!-- Optionally embed iframe here later -->
+      <iframe
+      src="https://drive.google.com/embeddedfolderview?id=1qggSnCpxpQiSs-GUdFiTq9KrVLdcvLvMwQflUT3vuZCx9O1xAWIYfQPvosYyDGCW4jFpzaNZ#grid"
+      style="width:100%; height:600px; border:2px solid #ccc; border-radius:12px;"
+      loading="lazy">
+        
+      </iframe>
+
     </div>
 
     <!-- Thank You Message -->
@@ -813,6 +819,9 @@
     padding: 2rem;
     border-radius: 10px;
     background-color: #fff;
+  }
+  #photo-gallery iframe {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
   }
 </style>
 

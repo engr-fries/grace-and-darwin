@@ -770,22 +770,17 @@
       <strong>#GodsGraceforDarwin</strong> & <strong>#DaRightOneforGrace</strong>
     </p>
 
-    <!-- Live Photo Viewer -->
-    <div class="gallery-viewer mb-4">
-      <button id="prevBtn" class="nav-btn">⟨</button>
-      <img id="galleryImage" class="gallery-img" src="" alt="Wedding Photo" />
-      <button id="nextBtn" class="nav-btn">⟩</button>
-    </div>
-
-    <!-- Fullscreen Modal -->
-    <div id="fullscreenModal">
-      <span id="closeModal">&times;</span>
-      <img id="fullscreenImage">
+    <!-- Google Drive Folder Embed -->
+    <div class="google-drive-gallery mb-5">
+      <iframe 
+        src="https://drive.google.com/embeddedfolderview?id=1qggSnCpxpQiSs-GUdFiTq9KrVLdcvLvMwQflUT3vuZCx9O1xAWIYfQPvosYyDGCW4jFpzaNZ#grid"
+        style="width:100%; height:600px; border:0;">
+      </iframe>
     </div>
 
     <!-- Thank You Message -->
-    <blockquote class="blockquote mt-5">
-      <h2 class="mb-4">🙏 A Note of Thanks</h2><br>
+    <blockquote class="blockquote">
+      <h2 class="mb-4">🙏 A Note of Thanks</h2>
       <p class="mb-3">
         From the beginning, this journey has been anchored in faith and filled with grace.
         Thank you for being part of our lives and of this milestone. Your prayers, love,
@@ -796,130 +791,29 @@
   </div>
 </section>
 
-<!-- Styles -->
+<!-- Optional Styling -->
 <style>
-#photo-gallery {
-  background: linear-gradient(to right, #fffaf5, #f9f9f9);
-}
-#photo-gallery h2 {
-  font-family: 'Great Vibes', cursive;
-  font-size: 2.8rem;
-  color: #b45e5e;
-}
-.btn-success {
-  background-color: #88b04b;
-  border-color: #88b04b;
-}
-.btn-success:hover {
-  background-color: #6d943b;
-  border-color: #6d943b;
-}
-.gallery-viewer {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 1rem;
-}
-.gallery-img {
-  max-width: 800px;
-  max-height: 450px;
-  border-radius: 12px;
-  cursor: pointer;
-  object-fit: contain;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
-}
-.nav-btn {
-  background-color: #b45e5e;
-  color: white;
-  border: none;
-  font-size: 2rem;
-  padding: 0.5rem 1rem;
-  border-radius: 50%;
-  cursor: pointer;
-}
-.nav-btn:hover {
-  background-color: #933e3e;
-}
-
-#fullscreenModal {
-  display: none;
-  position: fixed;
-  inset: 0;
-  background-color: rgba(0, 0, 0, 0.9);
-  z-index: 9999;
-  justify-content: center;
-  align-items: center;
-}
-#fullscreenModal img {
-  max-width: 90vw;
-  max-height: 90vh;
-  object-fit: contain;
-  border-radius: 8px;
-}
-#closeModal {
-  position: absolute;
-  top: 1rem;
-  right: 2rem;
-  color: white;
-  font-size: 2rem;
-  cursor: pointer;
-}
-</style>
-
-<!-- Script -->
-<script>
-const api = "https://script.google.com/macros/s/AKfycbzLwpAsg7LcsTfvmA-SAVU2we6eABqqCPMZ1oRejlFRdlZu5_Tx381vzVuVZGqr4XdY/exec";
-let images = [];
-let currentIndex = 0;
-
-const galleryImage = document.getElementById("galleryImage");
-const prevBtn = document.getElementById("prevBtn");
-const nextBtn = document.getElementById("nextBtn");
-const modal = document.getElementById("fullscreenModal");
-const modalImg = document.getElementById("fullscreenImage");
-const closeModal = document.getElementById("closeModal");
-
-function showImage(index) {
-  if (images.length === 0) return;
-  galleryImage.src = images[index].url;
-}
-
-fetch(api)
-  .then(res => res.json())
-  .then(data => {
-    images = data.images;
-    if (images.length > 0) {
-      showImage(currentIndex);
-    }
-  })
-  .catch(console.error);
-
-nextBtn.addEventListener("click", () => {
-  if (images.length === 0) return;
-  currentIndex = (currentIndex + 1) % images.length;
-  showImage(currentIndex);
-});
-
-prevBtn.addEventListener("click", () => {
-  if (images.length === 0) return;
-  currentIndex = (currentIndex - 1 + images.length) % images.length;
-  showImage(currentIndex);
-});
-
-galleryImage.addEventListener("click", () => {
-  modal.style.display = "flex";
-  modalImg.src = galleryImage.src;
-});
-
-closeModal.addEventListener("click", () => {
-  modal.style.display = "none";
-});
-window.addEventListener("click", (e) => {
-  if (e.target === modal) {
-    modal.style.display = "none";
+  #photo-gallery {
+    background: linear-gradient(to right, #fffaf5, #f9f9f9);
   }
-});
-</script>
+  #photo-gallery h2 {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.8rem;
+    color: #b45e5e;
+  }
+  .btn-success {
+    background-color: #88b04b;
+    border-color: #88b04b;
+  }
+  .btn-success:hover {
+    background-color: #6d943b;
+    border-color: #6d943b;
+  }
+  .google-drive-gallery iframe {
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+  }
+</style>
 
   
 <!--FOOTER STARTS HERE-->>
